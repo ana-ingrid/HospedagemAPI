@@ -1,9 +1,13 @@
 # Sistema de reservas de hotel 🏨
 
-**Arquitetura:** A arquitetura do sistema de reservas de hotel será monolítica e seguirá o padrão RESTful, com ênfase em
-Domain-Driven Design (DDD) para uma modelagem de negócios clara e eficiente. Focará em performance e escalabilidade, 
-utilizando práticas de otimização de banco de dados e caching para suportar grandes volumes de requisições. 
-A estrutura inicial monolítica permitirá uma evolução ágil, com possibilidade de transição para microsserviços no futuro, se necessário.
+
+**Arquitetura:** AO sistema de reservas seguirá uma arquitetura monolítica baseada no padrão RESTful e no Domain-Driven Design (DDD)
+para uma modelagem eficiente. O foco será em performance, escalabilidade e otimização do banco de dados, utilizando caching
+para suportar grandes volumes de requisições. A estrutura inicial permitirá evolução ágil, com transição para microsserviços
+no futuro, se necessário. Serão aplicadas práticas de Clean Code, SOLID e Test-Driven Development (TDD), garantindo código
+limpo, testável e fácil de manter.
+
+<br>
 
 **Objetivo:** O objetivo deste projeto é criar um sistema de reservas de hotel que, inicialmente, forneça funcionalidades
 essenciais como o gerenciamento de clientes, reservas, quartos, categorias, benefícios, pagamentos e endereços por meio de
@@ -13,16 +17,21 @@ a aplicação de benefícios nas reservas. A longo prazo, o sistema será aprimo
 mensageria para notificações, e escalabilidade para atender a um número crescente de usuários e reservas. O foco será em
 fornecer uma plataforma de alta performance, capaz de evoluir com as necessidades do negócio.
 
+<br>
+
 ## Resumo técnico
 
    **Versões:** Este projeto foi desenvolvido com Java 17, utilizando o Spring Framework 3.4.2 para implementar a lógica
    de aplicação. A gestão de dependências é feita através do Maven. O banco de dados utilizado é o PostgreSQL versão 13.x,
    garantindo a persistência dos dados e alta performance nas consultas.
 
+<br>
 
 ## Diagrama de Classes
 
   ![Diagrama de classes](diagramaDeClasses.png)
+
+<br>
 
 ## Banco de dados
 
@@ -34,6 +43,7 @@ fornecer uma plataforma de alta performance, capaz de evoluir com as necessidade
 
 Para acessar os dados da instância do banco de dados, entre em contato com a [Ana Ingrid](https://github.com/ana-ingrid).
 
+<br>
 
 ## Como realizar a organização dentro do seu Fork 📂
 
@@ -44,6 +54,7 @@ colaborativo e mantém o código organizado, evitando sobrecarga na branch princ
 - feature/crud-reservas
 - feature/consultas-personalizadas
 - feature/integracao-pgadmin
+
 
 **Pull Requests (PRs):** Ao finalizar uma tarefa, crie um Pull Request para mesclar as alterações da sua branch de funcionalidades
 na branch principal (main) do repositório principal. Certifique-se de que o PR está associado à issue correspondente, para que todos possam acompanhar o progresso da tarefa.
