@@ -29,7 +29,9 @@ fornecer uma plataforma de alta performance, capaz de evoluir com as necessidade
 
 ## Diagrama de Classes
 
-  ![Diagrama de classes](diagramaDeClasses.png)
+<p align="center"> 
+   <img src="diagramaDeClasses.png" alt="Diagrama de Classes">
+</p>
 
 <br>
 
