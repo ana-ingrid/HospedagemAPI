@@ -1,6 +1,8 @@
 package com.demo.hospedagem.endereco.model;
 
 
+import com.demo.hospedagem.cliente.model.Cliente;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -8,8 +10,14 @@ import lombok.Data;
 @AllArgsConstructor
 public class Endereco {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_endereco;
-    private Integer id_cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
+    private Cliente cliente;    //    private Integer id_cliente;
+
     private String logradouro;
     private Integer numero;
     private String complemento;
