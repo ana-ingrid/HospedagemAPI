@@ -1,6 +1,8 @@
 package com.demo.hospedagem.quarto.model;
 
 
+import com.demo.hospedagem.categoria.model.Categoria;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -9,8 +11,15 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 public class Quarto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_quarto;
-    private int id_categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "id-categoria", referencedColumnName = "id_categoria")
+    private Categoria categoria;    //private int id_categoria;
+
     private String tipo;
     private int capacidade;
     private int numero;
