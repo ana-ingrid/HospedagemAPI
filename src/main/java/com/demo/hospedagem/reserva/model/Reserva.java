@@ -1,6 +1,9 @@
 package com.demo.hospedagem.reserva.model;
 
+import com.demo.hospedagem.cliente.model.Cliente;
+import com.demo.hospedagem.pagamento.model.Pagamento;
 import com.demo.hospedagem.quarto.model.Quarto;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,14 +15,26 @@ import java.util.List;
 @AllArgsConstructor
 public class Reserva {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_reserva;
-    private int id_cliente;
-    private int id_pagamento;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
+    private Cliente cliente;    //private int id_cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "id_pagamento", referencedColumnName = "id_pagamento")
+    private Pagamento pagamento;   // private int id_pagamento;
+
     private LocalDate data_check_in;
     private LocalDate data_check_out;
     private String status;
     private BigDecimal valor_total;
     private LocalDate data_criacao;
+
+    @OneToMany
+    @JoinColumn(name = "reserva_quarto", referencedColumnName = "id_reserva")
     private List<Quarto> quartos;
 
 }
