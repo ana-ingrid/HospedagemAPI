@@ -33,6 +33,8 @@ fornecer uma plataforma de alta performance, capaz de evoluir com as necessidade
    <img src="diagramaDeClasses.png" alt="Diagrama de Classes">
 </p>
 
+
+<br>
 <br>
 
 ## Banco de dados
@@ -45,6 +47,7 @@ fornecer uma plataforma de alta performance, capaz de evoluir com as necessidade
 
 Para acessar os dados da instância do banco de dados, entre em contato com a [Ana Ingrid](https://github.com/ana-ingrid).
 
+<br>
 <br>
 
 ## Como realizar a organização dentro do seu Fork 📂

@@ -1,6 +1,5 @@
 package com.demo.hospedagem.beneficio.model;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
