@@ -1,8 +1,5 @@
 package com.demo.hospedagem.beneficio.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,8 +9,6 @@ import lombok.Data;
 
 public class Beneficio {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_beneficio;
     private String nome;
     private String descricao;
