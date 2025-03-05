@@ -6,9 +6,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-
-@Entity
-@Table(name = "endereco")
 @Data
 @AllArgsConstructor
 public class Endereco {
@@ -17,9 +14,9 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_endereco;
 
-    @OneToOne
-    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente", nullable = false)
-    private Cliente cliente;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
+    private Cliente cliente;    //    private Integer id_cliente;
 
     private String logradouro;
     private Integer numero;

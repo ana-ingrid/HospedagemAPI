@@ -1,5 +1,7 @@
 package com.demo.hospedagem.pagamento.model;
 
+import com.demo.hospedagem.reserva.model.Reserva;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -8,10 +10,15 @@ import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
-public class Pagamento {
 
+public class Pagamento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_pagamento;
-    private Integer id_reserva;
+
+    @OneToOne
+    @JoinColumn(name = "id_reserva", referencedColumnName = "id_reserva")
+    private Reserva reserva;       //private Integer id_reserva;
     private LocalDate data_pagamento;
     private BigDecimal valor_pago;
     private String metodo_pagamento;
