@@ -8,9 +8,9 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
 @Data
 @AllArgsConstructor
-
 public class Pagamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
