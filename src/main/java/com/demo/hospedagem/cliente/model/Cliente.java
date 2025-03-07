@@ -16,8 +16,6 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Cliente {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_cliente;
     private String nome;
 
@@ -29,8 +27,6 @@ public class Cliente {
 
     private String telefone;
     private LocalDate data_de_nascimento;
-
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Reserva> reservas;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL,  orphanRemoval = true)
