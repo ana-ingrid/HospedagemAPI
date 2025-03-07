@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+@Entity
 @Data
 @AllArgsConstructor
 public class Endereco {
@@ -16,7 +17,7 @@ public class Endereco {
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
-    private Cliente cliente;    //    private Integer id_cliente;
+    private Cliente cliente;
 
     private String logradouro;
     private Integer numero;
