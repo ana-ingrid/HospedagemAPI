@@ -8,6 +8,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+@Entity
 @Data
 @AllArgsConstructor
 public class Quarto {

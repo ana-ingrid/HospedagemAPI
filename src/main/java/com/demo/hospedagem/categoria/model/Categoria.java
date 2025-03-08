@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.util.List;
 
+@Entity
 @Data
 @AllArgsConstructor
 public class Categoria {
@@ -16,7 +17,8 @@ public class Categoria {
     private String nome;
     private String descricao;
     private String status_pagamento;
-    @OneToOne(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Beneficio> beneficio;
 
 }
