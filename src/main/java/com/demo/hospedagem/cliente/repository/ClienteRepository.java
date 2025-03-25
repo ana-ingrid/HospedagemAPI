@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
     @Query(value = "SELECT * FROM cliente c WHERE cpf = :cpf", nativeQuery = true)
-    Cliente findByCLientePorNome(@Param("cpf") String cpf);
+    Cliente findByCLientePorCpf(@Param("cpf") String cpf);
 
 }
